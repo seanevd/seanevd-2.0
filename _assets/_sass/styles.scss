@@ -90,3 +90,8 @@ $link-blue: #2193B8;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import "partials/pivotl";
+
+
+body {
+    background-color: yellow;
+}
