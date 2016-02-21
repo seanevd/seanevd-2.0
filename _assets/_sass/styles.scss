@@ -1,0 +1,92 @@
+@charset "utf-8";
+
+@function em($px, $base: $base-font-size) {
+    @return ($px / $base) * 1em;
+}
+
+// Our variables
+$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-size:   16px;
+$base-font-weight: 400;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     30px;
+
+// Width of the content area
+$small-medium: 25.9375em; //416px
+$medium: 48em; //760px
+$large: 75em; //1200px
+$x-large: 81.25em; //1300px
+
+
+// Colors
+$white: #FFFFFF;
+$black: #000000;
+$off-white: #F7F7F7;
+$grey: #9B9B9B;
+$dark-grey: #666666;
+
+$green: #64A600;
+$blue: #2473D0;
+$blue-link: #2193B8;
+$dark-blue: #2C2F3B;
+$purple: #43214E;
+
+$orange: #FF9900;
+$light-orange: #FFB84D;
+$red: #E65E4E;
+
+$link-blue: #2193B8;
+
+
+.scrollbar-measure {
+	width: 100px;
+	height: 100px;
+	overflow: scroll;
+	position: absolute;
+	top: -9999px;
+}
+
+
+// Type
+//
+
+@mixin pn-l {
+    font-family: "proxima-nova", arial, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+@mixin pn-r {
+    font-family: "proxima-nova", arial, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@mixin pn-b {
+    font-family: "proxima-nova", arial, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+@mixin r-r {
+    font-family: 'Roboto', arial, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@mixin r-m {
+    font-family: 'Roboto', arial, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+@mixin n-i {
+    font-family: 'Noto Serif', serif;
+    font-style: italic;
+}
+
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import "partials/pivotl";
