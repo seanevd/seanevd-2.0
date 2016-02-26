@@ -1448,27 +1448,6 @@ blockquote p {
   color: #6f6f6f;
 }
 
-@media only screen and (min-width: 40.063em) {
-  h1, h2, h3, h4, h5, h6 {
-    line-height: 1.4;
-  }
-
-  h1 {
-    font-size: 2.75rem;
-  }
-
-  h2 {
-    font-size: 2.3125rem;
-  }
-
-  h3 {
-    font-size: 1.6875rem;
-  }
-
-  h4 {
-    font-size: 1.4375rem;
-  }
-}
 /* Print */
 .print-only {
   display: none !important;
@@ -1586,10 +1565,16 @@ a:hover {
     color: #FEFDED;
   }
 
+  section {
+    margin-bottom: 4em;
+  }
+  section:last-child {
+    margin-bottom: 0;
+  }
+
   .meteor {
     position: relative;
-    height: 300px;
-    margin-bottom: 128px;
+    height: 70%;
   }
   .meteor img {
     position: absolute;
@@ -1600,13 +1585,41 @@ a:hover {
             transform: rotate(90deg);
   }
 }
+@media only screen and (min-width: 26.5625em) {
+  .column,
+  .columns {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+@media only screen and (min-width: 48em) {
+  section {
+    margin-bottom: 9.75em;
+  }
+
+  .meteor {
+    height: initial;
+    text-align: center;
+    margin-top: 9.75em;
+    margin-bottom: 9.75em;
+  }
+  .meteor img {
+    position: static;
+    height: initial;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
 @media only screen and (min-width: 64.063em) {
   h1 {
     font-size: 5em;
   }
 
+  section {
+    margin-bottom: 15.125em;
+  }
+
   .meteor {
-    text-align: center;
     margin-top: 15.125em;
     margin-bottom: 15.125em;
   }

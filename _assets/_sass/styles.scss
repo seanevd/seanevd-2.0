@@ -14,7 +14,7 @@ $base-line-height: 1.5;
 $spacing-unit:     30px;
 
 // Width of the content area
-$small-medium: 25.9375em; //416px
+$small: 26.5625em; //416px
 $medium: 48em; //760px
 $large: 64.063em; //1025px
 
@@ -102,11 +102,17 @@ a {
         color: $yellow;
     }
 
+    section {
+        margin-bottom: em(64px);
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
     .meteor {
         position: relative;
-        height: 300px;
-        margin-bottom: 128px;
-        
+        height: 70%;
+
         img {
             position: absolute;
             top: -32px;
@@ -118,8 +124,34 @@ a {
 
 }
 
+@media only screen and (min-width: $small) {
+
+    $gutterleft: 32px;
+    $gutterright: 32px;
+    .column,
+    .columns {
+        padding-left: $gutterleft;
+        padding-right: $gutterright;
+    }
+}
+
 @media only screen and (min-width: $medium) {
 
+    section {
+        margin-bottom: em(156px);
+    }
+
+    .meteor {
+        height: initial;
+        text-align: center;
+        margin-top: em(156px);
+        margin-bottom: em(156px);
+        img {
+            position: static;
+            height: initial;
+            transform: rotate(0deg);
+        }
+    }
 }
 
 @media only screen and (min-width: $large) {
@@ -128,10 +160,15 @@ a {
         font-size: em(80px);
     }
 
+    section {
+        margin-bottom: em(242px);
+    }
+
     .meteor {
-        text-align: center;
         margin-top: em(242px);
         margin-bottom: em(242px);
     }
+
+
 
 }
