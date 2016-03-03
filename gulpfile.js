@@ -51,6 +51,12 @@ gulp.task('images', function() {
     .pipe(gulp.dest('assets/images/'));
 });
 
+gulp.task('js-async', function() {
+    return gulp.src(['node_modules/picturefill/dist/picturefill.min.js'])
+        .pipe(concat('async.js'))
+        .pipe(gulp.dest('assets/js'))
+});
+
 gulp.task('js', function() {
     return gulp.src(['_assets/_js/**/*.js'])
         .pipe(jshint())
@@ -63,4 +69,4 @@ gulp.task('js', function() {
 });
 
 
-gulp.task('default', ['serve', 'jekyll']);
+gulp.task('default', ['js-async', 'serve', 'jekyll']);

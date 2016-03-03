@@ -80,6 +80,12 @@ a {
     }
 }
 
+picture {
+    img {
+        width: 100%;
+    }
+}
+
 .right {
     float: right;
 }
@@ -122,6 +128,25 @@ a {
         }
     }
 
+    //body
+    //____
+    .image-setup {
+        position: relative;
+        .title, .subtitle {
+            position: absolute;
+            color: $white;
+        }
+        .title {
+            @include e-r;
+            font-size: em(32px);
+            top: 32px;
+        }
+        .subtitle {
+            font-size: em(24px);
+            top: 64px;
+        }
+    }
+
 }
 
 @media only screen and (min-width: $small) {
@@ -136,6 +161,10 @@ a {
 }
 
 @media only screen and (min-width: $medium) {
+
+    h1 {
+        font-size: em(64px);
+    }
 
     section {
         margin-bottom: em(156px);

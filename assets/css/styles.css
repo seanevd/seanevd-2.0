@@ -1546,6 +1546,10 @@ a:hover {
   color: #F7F7F7;
 }
 
+picture img {
+  width: 100%;
+}
+
 .right {
   float: right;
 }
@@ -1584,6 +1588,25 @@ a:hover {
     -webkit-transform: rotate(90deg);
             transform: rotate(90deg);
   }
+
+  .image-setup {
+    position: relative;
+  }
+  .image-setup .title, .image-setup .subtitle {
+    position: absolute;
+    color: #FFFFFF;
+  }
+  .image-setup .title {
+    font-family: "europa",sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2em;
+    top: 32px;
+  }
+  .image-setup .subtitle {
+    font-size: 1.5em;
+    top: 64px;
+  }
 }
 @media only screen and (min-width: 26.5625em) {
   .column,
@@ -1593,6 +1616,10 @@ a:hover {
   }
 }
 @media only screen and (min-width: 48em) {
+  h1 {
+    font-size: 4em;
+  }
+
   section {
     margin-bottom: 9.75em;
   }
