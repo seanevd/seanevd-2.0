@@ -1576,9 +1576,13 @@ picture img {
     margin-bottom: 0;
   }
 
+  .screens .row {
+    margin-bottom: 2em;
+  }
+
   .meteor {
     position: relative;
-    height: 70%;
+    height: 20em;
   }
   .meteor img {
     position: absolute;
@@ -1592,8 +1596,11 @@ picture img {
   .image-setup {
     position: relative;
   }
-  .image-setup .title, .image-setup .subtitle {
+  .image-setup .screen-text {
     position: absolute;
+    top: 0;
+    left: 0;
+    padding: 32px;
     color: #FFFFFF;
   }
   .image-setup .title {
@@ -1601,11 +1608,9 @@ picture img {
     font-style: normal;
     font-weight: 400;
     font-size: 2em;
-    top: 32px;
   }
   .image-setup .subtitle {
     font-size: 1.5em;
-    top: 64px;
   }
 }
 @media only screen and (min-width: 26.5625em) {

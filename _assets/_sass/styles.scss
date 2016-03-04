@@ -115,9 +115,15 @@ picture {
         }
     }
 
+    .screens {
+        .row {
+            margin-bottom: em(32px);
+        }
+    }
+
     .meteor {
         position: relative;
-        height: 70%;
+        height: em(320px);
 
         img {
             position: absolute;
@@ -132,18 +138,19 @@ picture {
     //____
     .image-setup {
         position: relative;
-        .title, .subtitle {
+        .screen-text {
             position: absolute;
+            top: 0;
+            left: 0;
+            padding: 32px;
             color: $white;
         }
         .title {
             @include e-r;
             font-size: em(32px);
-            top: 32px;
         }
         .subtitle {
             font-size: em(24px);
-            top: 64px;
         }
     }
 
