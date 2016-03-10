@@ -90,22 +90,29 @@ picture {
     float: right;
 }
 
-.social {
-    li {
-        display: inline-block;
-        margin-left: em(8px, 18px);
-        font-size: em(18px)
-    }
-}
-
 
 
 @media only screen {
+
+    //utilities
+
+    .exclude-small {
+        display: none;
+    }
+
+    .width-38 {
+        width: 38%;
+    }
+
 
     h1 {
         @include e-l;
         font-size: em(36px);
         color: $yellow;
+        .arrow {
+            vertical-align: middle;
+            padding-left: 8px;
+        }
     }
 
     section {
@@ -138,8 +145,19 @@ picture {
     //____
     .image-setup {
         position: relative;
+        .screen {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $dark-grey;
+            opacity: 0.5;
+        }
         .screen-text {
             position: absolute;
+            width: 100%;
+            height: 100%;
             top: 0;
             left: 0;
             padding: 32px;
@@ -150,7 +168,27 @@ picture {
             font-size: em(32px);
         }
         .subtitle {
+            position: absolute;
+            bottom: 0;
             font-size: em(24px);
+            margin-bottom: em(32px, 24px);
+            &.top {
+                position: static;
+                bottom: auto;
+            }
+        }
+    }
+
+    //footer
+    //------
+
+    .social {
+        margin: 0;
+
+        li {
+            display: inline-block;
+            margin-right: em(8px, 18px);
+            font-size: em(18px)
         }
     }
 
@@ -165,9 +203,33 @@ picture {
         padding-left: $gutterleft;
         padding-right: $gutterright;
     }
+
+    // body
+
+    .image-setup {
+        .title {
+            font-size: em(48px);
+        }
+    }
 }
 
 @media only screen and (min-width: $medium) {
+
+    // utilities
+
+    .exclude-medium {
+        display: none;
+    }
+    .include-medium {
+        display: block;
+    }
+    .mobile {
+        display: none;
+    }
+    .medium-width-38 {
+        width: 38%;
+    }
+
 
     h1 {
         font-size: em(64px);
@@ -188,9 +250,28 @@ picture {
             transform: rotate(0deg);
         }
     }
+
+    //footer
+    //------
+
+    .social {
+        li {
+            margin-left: em(8px, 18px);
+        }
+    }
 }
 
 @media only screen and (min-width: $large) {
+
+    // utilities
+
+    .exclude-large {
+        display: none;
+    }
+    .include-large {
+        display: block;
+    }
+
 
     h1 {
         font-size: em(80px);
@@ -205,6 +286,11 @@ picture {
         margin-bottom: em(242px);
     }
 
+    .screen-text {
+        .title {
+            font-size: em(64px);
+        }
+    }
 
 
 }

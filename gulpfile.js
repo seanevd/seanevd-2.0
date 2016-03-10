@@ -6,6 +6,8 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     concat = require('gulp-concat'),
 
+    typeset = require('gulp-typeset'),
+
     rename = require('gulp-rename'),
     browserSync = require('browser-sync').create(),
     exec = require('child_process').exec,
@@ -49,6 +51,12 @@ gulp.task('images', function() {
   return gulp.src('_assets/_images/**/*')
     .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
     .pipe(gulp.dest('assets/images/'));
+});
+
+gulp.task('html', function () {
+    return gulp.src('_site/**/*.html')
+        .pipe(typeset())
+        .pipe(gulp.dest('_site/dist'));
 });
 
 gulp.task('js-async', function() {

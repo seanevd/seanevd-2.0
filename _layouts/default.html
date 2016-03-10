@@ -5,7 +5,9 @@
 
   <body>
 
-    {% include social.html %}
+    <div class="include-medium exclude-small">
+        {% include social.html %}
+    </div>
 
     <section>
         <div class="meteor">
@@ -16,7 +18,7 @@
             <div class="small-12 columns">
                 <h1>
                     I’m Sean Duncan, I help solve problems with web technologies. I’m currently working at Nutrislice, in Boulder, CO, on their Digital Signage and Meal Planner products.
-                    <a href="/more">More</a>
+                    <a href="/more">More<span class="arrow">&#8594;</span></a>
                 </h1>
             </div>
         </div>
@@ -31,6 +33,7 @@
                         <source srcset="assets/images/n-sa-md.png, assets/images/n-sa-md@2x.png 2x" media="(min-width: 48em)">
                         <img srcset="assets/images/n-sa-sm.png, assets/images/n-sa-sm@2x.png 2x" alt="Nutrislice Super Admin">
                     </picture>
+                    <div class="mobile screen"></div>
                     <div class="screen-text">
                         <h3 class="title">Nutrislice Super Admin</h3>
                         <p class="subtitle">Great place to administrate school stuff.</p>
@@ -48,9 +51,10 @@
                         <source srcset="assets/images/n-ds-md.png, assets/images/n-ds-md@2x.png 2x" media="(min-width: 48em)">
                         <img srcset="assets/images/n-ds-sm.png, assets/images/n-ds-sm@2x.png 2x" alt="Nutrislice Super Admin">
                     </picture>
+                    <div class="mobile screen"></div>
                     <div class="screen-text">
-                        <h3 class="title">Nutrislice Digital Signage</h3>
-                        <p class="subtitle">Nation's leading school signage player.</p>
+                        <h3 class="title medium-width-38">Nutrislice Digital Signage</h3>
+                        <p class="subtitle medium-width-38">Nation's leading school signage player.</p>
                     </div>
                 </div>
             </div>
@@ -64,9 +68,10 @@
                         <source srcset="assets/images/n-mp-md.png, assets/images/n-mp-md@2x.png 2x" media="(min-width: 48em)">
                         <img srcset="assets/images/n-mp-sm.png, assets/images/n-mp-sm@2x.png 2x" alt="Nutrislice Super Admin">
                     </picture>
+                    <div class="mobile screen"></div>
                     <div class="screen-text">
-                        <h3 class="title">Nutrislice Mealplanner</h3>
-                        <p class="subtitle">Nation's leading school signage player.</p>
+                        <h3 class="title right">Nutrislice Mealplanner</h3>
+                        <p class="subtitle top right">Student meal planning app, integrated with Nutrislice Menus.</p>
                     </div>
                 </div>
             </div>
@@ -80,17 +85,18 @@
                         <source srcset="assets/images/n-www-md.png, assets/images/n-www-md@2x.png 2x" media="(min-width: 48em)">
                         <img srcset="assets/images/n-www-sm.png, assets/images/n-www-sm@2x.png 2x" alt="Nutrislice Super Admin">
                     </picture>
+                    <div class="mobile screen"></div>
                     <div class="screen-text">
                         <h3 class="title">Nutrislice Website</h3>
-                        <p class="subtitle">Nation's leading school signage player.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-
-    {% include footer.html %}
+    <div class="exclude-medium">
+        {% include social.html %}
+    </div>
 
   </body>
 
