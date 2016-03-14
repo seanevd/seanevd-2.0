@@ -145,6 +145,7 @@ picture {
     //____
     .image-setup {
         position: relative;
+        display: inline-block;
         .screen {
             position: absolute;
             top: 0;

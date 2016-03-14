@@ -1601,6 +1601,7 @@ picture img {
 
   .image-setup {
     position: relative;
+    display: inline-block;
   }
   .image-setup .screen {
     position: absolute;
