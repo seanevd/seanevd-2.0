@@ -115,6 +115,12 @@ picture {
         }
     }
 
+    h2 {
+        @include gp-r;
+        font-size: em(28px);
+        color: $yellow;
+    }
+
     section {
         margin-bottom: em(64px);
         &:last-child {

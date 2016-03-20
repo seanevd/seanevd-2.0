@@ -2,22 +2,72 @@
 layout: default
 ---
 
-<div class="home">
+<section class="screens">
+    <div class="row">
+        <div class="small-12 columns">
+            <a href="#" class="image-setup">
+                <picture>
+                    <source srcset="assets/images/n-sa-lg.png, assets/images/n-sa-lg@2x.png 2x" media="(min-width: 64.063em)">
+                    <source srcset="assets/images/n-sa-md.png, assets/images/n-sa-md@2x.png 2x" media="(min-width: 48em)">
+                    <img srcset="assets/images/n-sa-sm.png, assets/images/n-sa-sm@2x.png 2x" alt="Nutrislice Super Admin">
+                </picture>
+                <div class="mobile screen"></div>
+                <div class="screen-text">
+                    <h3 class="title">Nutrislice Admin</h3>
+                    <p class="subtitle">The product that houses a majority of Nutrislice's products.</p>
+                </div>
+            </a>
 
-  <h1 class="page-heading">Posts</h1>
+        </div>
+    </div>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+    <div class="row">
+        <div class="small-12 columns">
+            <a href="#" class="image-setup">
+                <picture>
+                    <source srcset="assets/images/n-ds-lg.png, assets/images/n-ds-lg@2x.png 2x" media="(min-width: 64.063em)">
+                    <source srcset="assets/images/n-ds-md.png, assets/images/n-ds-md@2x.png 2x" media="(min-width: 48em)">
+                    <img srcset="assets/images/n-ds-sm.png, assets/images/n-ds-sm@2x.png 2x" alt="Nutrislice Super Admin">
+                </picture>
+                <div class="mobile screen"></div>
+                <div class="screen-text">
+                    <h3 class="title medium-width-38">Nutrislice Digital Signage</h3>
+                    <p class="subtitle medium-width-38">Integrated with Menus for a turnkey solution to display school lunch.</p>
+                </div>
+            </a>
+        </div>
+    </div>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+    <div class="row">
+        <div class="small-12 columns">
+            <a href="#" class="image-setup">
+                <picture>
+                    <source srcset="assets/images/n-mp-lg.png, assets/images/n-mp-lg@2x.png 2x" media="(min-width: 64.063em)">
+                    <source srcset="assets/images/n-mp-md.png, assets/images/n-mp-md@2x.png 2x" media="(min-width: 48em)">
+                    <img srcset="assets/images/n-mp-sm.png, assets/images/n-mp-sm@2x.png 2x" alt="Nutrislice Super Admin">
+                </picture>
+                <div class="mobile screen"></div>
+                <div class="screen-text">
+                    <h3 class="title right">Create-a-Meal</h3>
+                    <p class="subtitle top right">Student meal planning app, integrated with Nutrislice Menus.</p>
+                </div>
+            </a>
+        </div>
+    </div>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>
+    <div class="row">
+        <div class="small-12 columns">
+            <a href="#" class="image-setup">
+                <picture>
+                    <source srcset="assets/images/n-www-lg.png, assets/images/n-www-lg@2x.png 2x" media="(min-width: 64.063em)">
+                    <source srcset="assets/images/n-www-md.png, assets/images/n-www-md@2x.png 2x" media="(min-width: 48em)">
+                    <img srcset="assets/images/n-www-sm.png, assets/images/n-www-sm@2x.png 2x" alt="Nutrislice Super Admin">
+                </picture>
+                <div class="mobile screen"></div>
+                <div class="screen-text">
+                    <h3 class="title">Nutrislice Website</h3>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>

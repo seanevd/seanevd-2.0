@@ -1575,6 +1575,14 @@ picture img {
     padding-left: 8px;
   }
 
+  h2 {
+    font-family: "adobe-garamond-pro",sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.75em;
+    color: #FEFDED;
+  }
+
   section {
     margin-bottom: 4em;
   }
