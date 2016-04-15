@@ -1607,6 +1607,14 @@ picture img {
             transform: rotate(90deg);
   }
 
+  .sputnik {
+    text-align: center;
+    margin-bottom: 4em;
+  }
+  .sputnik img {
+    width: 1.8125em;
+  }
+
   .image-setup {
     position: relative;
     display: inline-block;
