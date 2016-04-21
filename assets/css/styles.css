@@ -1661,6 +1661,7 @@ picture img {
     display: inline-block;
     margin-right: 0.44444em;
     font-size: 1.125em;
+    font-style: italic;
   }
 }
 @media only screen and (min-width: 26.5625em) {

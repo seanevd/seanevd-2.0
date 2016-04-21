@@ -1,20 +1,14 @@
 <header class="site-header">
 
-  <div class="row">
+    <div class="row">
 
-    <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+        <div class="small-12 columns">
 
-    <nav class="site-nav">
+            <h1 class="title">{{page.title}}</h1>
+            <h2 class="subtitle">{{page.subtitle}}</h2>
 
-      <div class="trigger">
-        {% for my_page in site.pages %}
-          {% if my_page.title %}
-          <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
-          {% endif %}
-        {% endfor %}
-      </div>
-    </nav>
+        </div>
 
-  </div>
+    </div>
 
 </header>
