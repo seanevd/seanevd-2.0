@@ -80,6 +80,16 @@ a {
     }
 }
 
+p {
+    color: $yellow;
+    font-size: em(20px);
+    margin-bottom: em(32px, 20px);
+}
+
+img {
+    margin-bottom: em(32px);
+}
+
 picture {
     img {
         width: 100%;
@@ -152,6 +162,24 @@ picture {
         margin-bottom: em(64px);
         img {
             width: em(29px);
+        }
+    }
+
+    //header
+    //______
+    .page-header {
+        h1, h2 {
+            text-align: center;
+        }
+        h1 {
+            line-height: em(80px, 80px);
+            padding-top: em(64px, 80px);
+            margin-bottom: em(16px, 80px);
+        }
+        h2 {
+            font-style: italic;
+            line-height: em(32px, 28px);
+            margin-bottom: em(64px, 28px);
         }
     }
 

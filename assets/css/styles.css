@@ -1546,6 +1546,16 @@ a:hover {
   color: #F7F7F7;
 }
 
+p {
+  color: #FEFDED;
+  font-size: 1.25em;
+  margin-bottom: 1.6em;
+}
+
+img {
+  margin-bottom: 2em;
+}
+
 picture img {
   width: 100%;
 }
@@ -1613,6 +1623,20 @@ picture img {
   }
   .sputnik img {
     width: 1.8125em;
+  }
+
+  .page-header h1, .page-header h2 {
+    text-align: center;
+  }
+  .page-header h1 {
+    line-height: 1em;
+    padding-top: 0.8em;
+    margin-bottom: 0.2em;
+  }
+  .page-header h2 {
+    font-style: italic;
+    line-height: 1.14286em;
+    margin-bottom: 2.28571em;
   }
 
   .image-setup {

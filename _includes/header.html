@@ -1,8 +1,8 @@
-<header class="site-header">
+<header class="site-header{% if page.subtitle %} page-header{% endif %}">
 
     <div class="row">
 
-        <div class="small-12 columns">
+        <div class="{% if page.subtitle %}medium-push-2 medium-8 {% endif %} small-12 columns">
 
             <h1 class="title">{{page.title}}</h1>
             <h2 class="subtitle">{{page.subtitle}}</h2>
