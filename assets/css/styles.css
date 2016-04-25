@@ -1552,10 +1552,6 @@ p {
   margin-bottom: 1.6em;
 }
 
-img {
-  margin-bottom: 2em;
-}
-
 picture img {
   width: 100%;
 }
@@ -1571,6 +1567,11 @@ picture img {
 
   .width-38 {
     width: 38%;
+  }
+
+  .columns.mobile-full-width {
+    padding-left: 0;
+    padding-right: 0;
   }
 
   h1 {
@@ -1625,6 +1626,42 @@ picture img {
     width: 1.8125em;
   }
 
+  .site-header {
+    height: 84%;
+  }
+  .site-header .row {
+    height: 100%;
+  }
+  .site-header .columns {
+    position: relative;
+    height: 100%;
+  }
+  .site-header .header-items {
+    position: absolute;
+    bottom: 0;
+    right: 32px;
+  }
+  .site-header .title, .site-header .subtitle {
+    text-align: right;
+  }
+  .site-header .title {
+    clear: both;
+    margin-bottom: 0;
+  }
+  .site-header .subtitle {
+    font-family: 'Inconsolata', monospace;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1em;
+    margin-bottom: 4em;
+    margin-top: 0;
+  }
+  .site-header .asteroid {
+    display: inline-block;
+    height: 128px;
+    float: right;
+  }
+
   .page-header h1, .page-header h2 {
     text-align: center;
   }
@@ -1642,6 +1679,7 @@ picture img {
   .image-setup {
     position: relative;
     display: inline-block;
+    width: 100%;
   }
   .image-setup .screen {
     position: absolute;
@@ -1649,7 +1687,7 @@ picture img {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #666666;
+    background-color: #423F41;
     opacity: 0.5;
   }
   .image-setup .screen-text {
@@ -1658,7 +1696,7 @@ picture img {
     height: 100%;
     top: 0;
     left: 0;
-    padding: 32px;
+    padding: 0 32px;
     color: #FFFFFF;
   }
   .image-setup .title {
@@ -1666,16 +1704,34 @@ picture img {
     font-style: normal;
     font-weight: 400;
     font-size: 2em;
+    margin-top: 0.375em;
   }
   .image-setup .subtitle {
     position: absolute;
-    bottom: 0;
+    right: 1.33333em;
+    bottom: 1.33333em;
+    left: 1.33333em;
     font-size: 1.5em;
-    margin-bottom: 1.33333em;
+    margin-bottom: 0;
+    padding-bottom: 0;
   }
   .image-setup .subtitle.top {
     position: static;
     bottom: auto;
+  }
+
+  img.page {
+    margin-bottom: 0.5em;
+  }
+
+  .image-caption {
+    font-family: "adobe-garamond-pro",sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 2em;
+    color: #FEFDED;
+    opacity: 0.8;
   }
 
   .social {
@@ -1686,6 +1742,10 @@ picture img {
     margin-right: 0.44444em;
     font-size: 1.125em;
     font-style: italic;
+  }
+
+  .footer-padding {
+    margin-bottom: 2em;
   }
 }
 @media only screen and (min-width: 26.5625em) {
@@ -1716,6 +1776,11 @@ picture img {
     width: 38%;
   }
 
+  .columns.mobile-full-width {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
   h1 {
     font-size: 4em;
   }
@@ -1735,6 +1800,21 @@ picture img {
     height: initial;
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
+  }
+
+  .site-header .title {
+    display: inline;
+  }
+  .site-header .subtitle {
+    font-size: 1.25em;
+    margin-top: 0.4em;
+    line-height: 1.4em;
+  }
+  .site-header .asteroid {
+    display: inline;
+    height: 44px;
+    float: none;
+    margin-right: 16px;
   }
 
   .social li {
@@ -1759,8 +1839,25 @@ picture img {
   }
 
   .meteor {
-    margin-top: 15.125em;
-    margin-bottom: 15.125em;
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 78%;
+  }
+  .meteor img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+
+  .site-header .subtitle {
+    font-size: 1.5em;
+    line-height: 1.25em;
+  }
+  .site-header .asteroid {
+    height: 56px;
   }
 
   .screen-text .title {

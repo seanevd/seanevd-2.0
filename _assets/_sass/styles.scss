@@ -63,6 +63,12 @@ $yellow: #FEFDED;
     font-weight: 400;
 }
 
+@mixin i-r {
+    font-family: 'Inconsolata', monospace;
+    font-style: normal;
+    font-weight: 400;
+}
+
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import "partials/pivotl";
@@ -84,10 +90,6 @@ p {
     color: $yellow;
     font-size: em(20px);
     margin-bottom: em(32px, 20px);
-}
-
-img {
-    margin-bottom: em(32px);
 }
 
 picture {
@@ -112,6 +114,11 @@ picture {
 
     .width-38 {
         width: 38%;
+    }
+
+    .columns.mobile-full-width {
+        padding-left: 0;
+        padding-right: 0;
     }
 
 
@@ -167,6 +174,40 @@ picture {
 
     //header
     //______
+    .site-header {
+        height: 84%;
+        .row {
+            height: 100%;
+        }
+        .columns {
+            position: relative;
+            height: 100%;
+        }
+        .header-items {
+            position: absolute;
+            bottom: 0;
+            right: 32px;
+        }
+        .title, .subtitle {
+            text-align: right;
+        }
+        .title {
+            clear: both;
+            margin-bottom: 0;
+        }
+        .subtitle {
+            @include i-r;
+            font-size: em(16px);
+            margin-bottom: em(64px);
+            margin-top: 0;
+        }
+        .asteroid {
+            display: inline-block;
+            height: 128px;
+            float: right;
+        }
+    }
+
     .page-header {
         h1, h2 {
             text-align: center;
@@ -188,13 +229,14 @@ picture {
     .image-setup {
         position: relative;
         display: inline-block;
+        width: 100%;
         .screen {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: $dark-grey;
+            background-color: $black;
             opacity: 0.5;
         }
         .screen-text {
@@ -203,23 +245,39 @@ picture {
             height: 100%;
             top: 0;
             left: 0;
-            padding: 32px;
+            padding: 0 32px;
             color: $white;
         }
         .title {
             @include e-r;
             font-size: em(32px);
+            margin-top: em(12px, 32px);
         }
         .subtitle {
             position: absolute;
-            bottom: 0;
+            right: em(32px, 24px);
+            bottom: em(32px, 24px);
+            left: em(32px, 24px);
             font-size: em(24px);
-            margin-bottom: em(32px, 24px);
+            margin-bottom: 0;
+            padding-bottom: 0;
             &.top {
                 position: static;
                 bottom: auto;
             }
         }
+    }
+
+    img.page {
+        margin-bottom: em(8px);
+    }
+
+    .image-caption {
+        @include gp-i;
+        text-align: center;
+        margin-bottom: em(32px);
+        color: $yellow;
+        opacity: 0.8;
     }
 
     //footer
@@ -234,6 +292,10 @@ picture {
             font-size: em(18px);
             font-style: italic;
         }
+    }
+
+    .footer-padding {
+        margin-bottom: em(32px);
     }
 
 }
@@ -274,6 +336,11 @@ picture {
         width: 38%;
     }
 
+    .columns.mobile-full-width {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
 
     h1 {
         font-size: em(64px);
@@ -292,6 +359,26 @@ picture {
             position: static;
             height: initial;
             transform: rotate(0deg);
+        }
+    }
+
+    //header
+    //------
+    .site-header {
+        .title {
+            display: inline;
+        }
+        .subtitle {
+            font-size: em(20px);
+            margin-top: em(8px, 20px);
+            line-height: em(28px, 20px);
+        }
+
+        .asteroid {
+            display: inline;
+            height: 44px;
+            float: none;
+            margin-right: 16px;
         }
     }
 
@@ -326,8 +413,28 @@ picture {
     }
 
     .meteor {
-        margin-top: em(242px);
-        margin-bottom: em(242px);
+        margin-top: 0;
+        margin-bottom: 0;
+        height: 78%;
+        img {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+        }
+    }
+
+    .site-header {
+        .subtitle {
+            font-size: em(24px);
+            line-height: em(30px, 24px);
+        }
+
+        .asteroid {
+            height: 56px;
+        }
     }
 
     .screen-text {

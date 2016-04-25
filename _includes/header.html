@@ -2,10 +2,23 @@
 
     <div class="row">
 
-        <div class="{% if page.subtitle %}medium-push-2 medium-8 {% endif %} small-12 columns">
+        <div class="small-12 columns">
 
-            <h1 class="title">{{page.title}}</h1>
-            <h2 class="subtitle">{{page.subtitle}}</h2>
+            <div class="header-items">
+                {% if page.ida %}
+                    {% include ida.svg %}
+                {% else %}
+                    {% if page.hyperion %}
+                        {% include hyperion.svg %}
+                    {% else %}
+                        {% if page.pia %}
+                            {% include pia.svg %}
+                        {% endif %}
+                    {% endif %}
+                {% endif %}
+                <h1 class="title">{{page.title}}</h1>
+                <h2 class="subtitle">{{page.subtitle}}</h2>
+            </div>
 
         </div>
 
