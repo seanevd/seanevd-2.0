@@ -49,11 +49,11 @@ img {
 }
 
 .left {
-  float: left !important;
+  float: left;
 }
 
 .right {
-  float: right !important;
+  float: right;
 }
 
 .clearfix {
@@ -1626,6 +1626,16 @@ picture img {
     width: 1.8125em;
   }
 
+  .return-home {
+    font-size: 1.125em;
+    font-style: italic;
+    line-height: 1.55556em;
+  }
+
+  .no-i {
+    font-style: normal;
+  }
+
   .site-header {
     height: 84%;
   }
@@ -1654,7 +1664,8 @@ picture img {
     font-weight: 400;
     font-size: 1em;
     margin-bottom: 4em;
-    margin-top: 0;
+    margin-top: 0.25em;
+    line-height: 1.25em;
   }
   .site-header .asteroid {
     display: inline-block;
@@ -1746,6 +1757,10 @@ picture img {
 
   .footer-padding {
     margin-bottom: 2em;
+  }
+  .footer-padding .right {
+    float: none;
+    text-align: center;
   }
 }
 @media only screen and (min-width: 26.5625em) {

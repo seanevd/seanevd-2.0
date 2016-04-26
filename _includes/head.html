@@ -11,8 +11,8 @@
     // Picture element HTML5 shiv
     document.createElement( "picture" );
   </script>
-  <script src="assets/js/async.js" async></script>
-  <script src="assets/js/main.js"></script>
+  <script src="{{ "/assets/js/async.js" | prepend: site.baseurl }}" async></script>
+  <script src="{{ "/assets/js/main.js" | prepend: site.baseurl }}"></script>
 
   <title>Sean Duncan | A Portfolio of Work</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
