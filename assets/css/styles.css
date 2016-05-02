@@ -1533,7 +1533,7 @@ blockquote p {
   }
 }
 body {
-  font-family: "adobe-garamond-pro",sans-serif;
+  font-family: "adobe-garamond-pro", serif;
   font-style: normal;
   font-weight: 400;
   background-color: #423F41;
@@ -1541,6 +1541,8 @@ body {
 
 a {
   color: #999999;
+  -webkit-transition: color 0.16s ease-in-out;
+  transition: color 0.16s ease-in-out;
 }
 a:hover {
   color: #F7F7F7;
@@ -1561,6 +1563,22 @@ picture img {
 }
 
 @media only screen {
+  .tac {
+    text-align: center;
+  }
+
+  .smb16 {
+    margin-bottom: 1em;
+  }
+
+  .smb32 {
+    margin-bottom: 2em;
+  }
+
+  .spt32 {
+    padding-top: 2em;
+  }
+
   .exclude-small {
     display: none;
   }
@@ -1575,7 +1593,7 @@ picture img {
   }
 
   h1 {
-    font-family: "europa",sans-serif;
+    font-family: "europa", sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 2.25em;
@@ -1587,7 +1605,7 @@ picture img {
   }
 
   h2 {
-    font-family: "adobe-garamond-pro",sans-serif;
+    font-family: "adobe-garamond-pro", serif;
     font-style: normal;
     font-weight: 400;
     font-size: 1.75em;
@@ -1630,6 +1648,9 @@ picture img {
     font-size: 1.125em;
     font-style: italic;
     line-height: 1.55556em;
+  }
+  .return-home .no-i {
+    vertical-align: text-top;
   }
 
   .no-i {
@@ -1711,7 +1732,7 @@ picture img {
     color: #FFFFFF;
   }
   .image-setup .title {
-    font-family: "europa",sans-serif;
+    font-family: "europa", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 2em;
@@ -1736,7 +1757,7 @@ picture img {
   }
 
   .image-caption {
-    font-family: "adobe-garamond-pro",sans-serif;
+    font-family: "adobe-garamond-pro", serif;
     font-style: italic;
     font-weight: 400;
     text-align: center;
@@ -1815,6 +1836,28 @@ picture img {
     height: initial;
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
+  }
+
+  button {
+    font-family: "europa", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.375em;
+    color: #FEFDED;
+    background-color: #423F41;
+    border: 2px solid #FEFDED;
+    padding: 16px 32px;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+  }
+  button:hover {
+    color: #423F41;
+    background-color: #FEFDED;
+  }
+  button:active {
+    background-color: #fbf8bd;
+    border-color: #fbf8bd;
   }
 
   .site-header .title {

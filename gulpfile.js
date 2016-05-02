@@ -12,7 +12,8 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync').create(),
     exec = require('child_process').exec,
     sourcemaps = require('gulp-sourcemaps'),
-    gutil = require('gulp-util');
+    gutil = require('gulp-util'),
+    awspublish = require('gulp-awspublish');
 
 
 gulp.task('jekyll', function (cb){
@@ -74,6 +75,40 @@ gulp.task('js', function() {
             //look for supported gulp-sourcemap plugins
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('assets/js'))
+});
+
+gulp.task('publish', function() {
+
+  // create a new publisher using S3 options
+  // http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#constructor-property
+  var publisher = awspublish.create({
+    region: 'us-west-2',
+    params: {
+      Bucket: 'seanduncan.net'
+    }
+  });
+
+  // define custom headers
+  var headers = {
+    'Cache-Control': 'max-age=315360000, no-transform, public'
+    // ...
+  };
+
+  return gulp.src(['_site/**/*'])
+     // gzip, Set Content-Encoding headers and add .gz extension
+    // .pipe(awspublish.gzip({ ext: '.gz' }))
+
+    // publisher will add Content-Length, Content-Type and headers specified above
+    // If not specified it will set x-amz-acl to public-read by default
+    .pipe(publisher.publish(headers))
+
+    // create a cache file to speed up consecutive uploads
+    .pipe(publisher.cache())
+
+    .pipe(publisher.sync())
+
+     // print upload updates to console
+    .pipe(awspublish.reporter());
 });
 
 

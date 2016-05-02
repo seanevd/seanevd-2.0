@@ -34,31 +34,31 @@ $yellow: #FEFDED;
 //
 
 @mixin gp-r {
-    font-family: "adobe-garamond-pro",sans-serif;
+    font-family: "adobe-garamond-pro", serif;
     font-style: normal;
     font-weight: 400;
 }
 
 @mixin gp-i {
-    font-family: "adobe-garamond-pro",sans-serif;
+    font-family: "adobe-garamond-pro", serif;
     font-style: italic;
     font-weight: 400;
 }
 
 @mixin e-l {
-    font-family: "europa",sans-serif;
+    font-family: "europa", sans-serif;
     font-style: normal;
     font-weight: 300;
 }
 
 @mixin e-r {
-    font-family: "europa",sans-serif;
+    font-family: "europa", sans-serif;
     font-style: normal;
     font-weight: 400;
 }
 
 @mixin e-i {
-    font-family: "europa",sans-serif;
+    font-family: "europa", sans-serif;
     font-style: italic;
     font-weight: 400;
 }
@@ -81,6 +81,7 @@ body {
 
 a {
     color: $grey;
+    transition: color 0.16s ease-in-out;
     &:hover {
         color: $off-white;
     }
@@ -107,6 +108,19 @@ picture {
 @media only screen {
 
     //utilities
+
+    .tac {
+        text-align: center;
+    }
+    .smb16 {
+        margin-bottom: em(16px);
+    }
+    .smb32 {
+        margin-bottom: em(32px);
+    }
+    .spt32 {
+        padding-top: em(32px);
+    }
 
     .exclude-small {
         display: none;
@@ -178,6 +192,9 @@ picture {
         font-size: em(18px);
         font-style: italic;
         line-height: em(28px, 18px);
+        .no-i {
+            vertical-align: text-top;
+        }
     }
     .no-i {
         font-style: normal;
@@ -372,6 +389,25 @@ picture {
             position: static;
             height: initial;
             transform: rotate(0deg);
+        }
+    }
+
+    button {
+        @include e-r;
+        font-size: em(22px);
+        color: $yellow;
+        background-color: $black;
+        border: 2px solid $yellow;
+        padding: 16px 32px;
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+        &:hover {
+            color: $black;
+            background-color: $yellow;
+        }
+        &:active {
+            background-color: darken($yellow, 10%);
+            border-color: darken($yellow, 10%);
         }
     }
 
